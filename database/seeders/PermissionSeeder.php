@@ -92,12 +92,10 @@ class PermissionSeeder extends Seeder
         Permission::create(['name' => 'create classes']);
         Permission::create(['name' => 'view classes']);
         Permission::create(['name' => 'edit classes']);
-        // Permission::create(['name' => 'delete classes']);
         
         Permission::create(['name' => 'create sections']);
         Permission::create(['name' => 'view sections']);
         Permission::create(['name' => 'edit sections']);
-        // Permission::create(['name' => 'delete sections']);
 
         $user = \App\Models\User::factory()->create([
             'email' => 'admin@ut.com',

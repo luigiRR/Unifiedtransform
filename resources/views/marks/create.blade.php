@@ -8,7 +8,7 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-cloud-sun"></i> Give Marks
+                        <em class="bi bi-cloud-sun"></em> Give Marks
                     </h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
@@ -20,22 +20,22 @@
                     @include('session-messages')
                     @if ($academic_setting['marks_submission_status'] == "on")
                     <p class="text-primary">
-                        <i class="bi bi-exclamation-diamond-fill me-2"></i> Marks Submission Window is open now.
+                        <em class="bi bi-exclamation-diamond-fill me-2"></em> Marks Submission Window is open now.
                     </p>
                     @endif
                     <p class="text-primary">
-                        <i class="bi bi-exclamation-diamond-fill me-2"></i> Final Marks submission should be done only once in a Semester when the Marks Submission Window is open.
+                        <em class="bi bi-exclamation-diamond-fill me-2"></em> Final Marks submission should be done only once in a Semester when the Marks Submission Window is open.
                     </p>
                     @if ($final_marks_submitted)
                     <p class="text-success">
-                        <i class="bi bi-exclamation-diamond-fill me-2"></i> Marks are submitted.
+                        <em class="bi bi-exclamation-diamond-fill me-2"></em> Marks are submitted.
                     </p>
                     @endif
-                    <h3><i class="bi bi-diagram-2"></i> Class #{{request()->query('class_name')}}, Section #{{request()->query('section_name')}}</h3>
-                    <h3><i class="bi bi-compass"></i> Course: {{request()->query('course_name')}}</h3>
+                    <h3><em class="bi bi-diagram-2"></em> Class #{{request()->query('class_name')}}, Section #{{request()->query('section_name')}}</h3>
+                    <h3><em class="bi bi-compass"></em> Course: {{request()->query('course_name')}}</h3>
                     @if (!$final_marks_submitted && count($exams) > 0 && $academic_setting['marks_submission_status'] == "on")
                         <div class="col-3 mt-3">
-                            <a type="button" href="{{route('course.final.mark.submit.show', ['class_id' => $class_id, 'class_name' => request()->query('class_name'), 'section_id' => $section_id, 'section_name' => request()->query('section_name'), 'course_id' => $course_id, 'course_name' => request()->query('course_name'), 'semester_id' => $semester_id])}}" class="btn btn-outline-primary" onclick="return confirm('Are you sure, you want to submit final marks?')"><i class="bi bi-check2"></i> Submit Final Marks</a>
+                            <a type="button" href="{{route('course.final.mark.submit.show', ['class_id' => $class_id, 'class_name' => request()->query('class_name'), 'section_id' => $section_id, 'section_name' => request()->query('section_name'), 'course_id' => $course_id, 'course_name' => request()->query('course_name'), 'semester_id' => $semester_id])}}" class="btn btn-outline-primary" onclick="return confirm('Are you sure, you want to submit final marks?')"><em class="bi bi-check2"></em> Submit Final Marks</a>
                         </div>
                     @endif
                     <form action="{{route('course.mark.store')}}" method="POST">
@@ -45,7 +45,7 @@
                             <div class="col">
                                 <div class="table-responsive">
                                     
-                                    <table class="table table-hover">
+                                    <table class="table table-hover" aria-describedby="StudentExams">
                                         <thead>
                                             <tr>
                                             <th scope="col">Student Name</th>
@@ -122,25 +122,25 @@
                         {{-- <div class="row justify-content-between mb-3"> --}}
                             @if(!$final_marks_submitted && count($exams) > 0)
                             <div class="col-3">
-                                <button type="submit" class="btn btn-outline-primary"><i class="bi bi-check2"></i> Save</button>
+                                <button type="submit" class="btn btn-outline-primary"><em class="bi bi-check2"></em> Save</button>
                             </div>
                             @else
                                 @if($final_marks_submitted)
                                 <div class="col-5">
                                     <p class="text-success">
-                                        <i class="bi bi-exclamation-diamond-fill me-2"></i> You have submitted Final Marks <i class="bi bi-stars"></i>.
+                                        <em class="bi bi-exclamation-diamond-fill me-2"></em> You have submitted Final Marks <em class="bi bi-stars"></em>.
                                     </p>
                                 </div>
                                 @else
                                 <div class="col-5">
                                     <p class="text-primary">
-                                        <i class="bi bi-exclamation-diamond-fill me-2"></i> Create Exam to give marks.
+                                        <em class="bi bi-exclamation-diamond-fill me-2"></em> Create Exam to give marks.
                                     </p>
                                 </div>
                                 @endif
                             @endif
                             {{-- <div class="col-3">
-                                <button type="button" class="btn btn-outline-primary"><i class="bi bi-check2"></i> Submit Marks</button>
+                                <button type="button" class="btn btn-outline-primary"><em class="bi bi-check2"></em> Submit Marks</button>
                             </div> --}}
                         {{-- </div> --}}
                     </form>

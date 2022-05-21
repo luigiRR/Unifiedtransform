@@ -7,7 +7,7 @@
         <div class="col-xs-11 col-sm-11 col-md-11 col-lg-10 col-xl-10 col-xxl-10">
             <div class="row pt-2">
                 <div class="col ps-4">
-                    <h1 class="display-6 mb-3"><i class="bi bi-calendar2-week"></i> Attendance</h1>
+                    <h1 class="display-6 mb-3"><em class="bi bi-calendar2-week"></em> Attendance</h1>
                     <div class="row">
                         <div class="col">
                             <div class="row">
@@ -15,7 +15,7 @@
                                 <div class="col-12">
                                     <div class="card my-3">
                                         <div class="card-header bg-transparent">
-                                            <i class="bi bi-diagram-2"></i> {{$school_class->class_name}}
+                                            <em class="bi bi-diagram-2"></em> {{$school_class->class_name}}
                                         </div>
                                         <div class="card-body text-dark">
                                             @if ($academic_setting->attendance_type == 'course')

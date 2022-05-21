@@ -109,20 +109,16 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/marks/create', [MarkController::class, 'create'])->name('course.mark.create');
     Route::post('/marks/store', [MarkController::class, 'store'])->name('course.mark.store');
     Route::get('/marks/results', [MarkController::class, 'index'])->name('course.mark.list.show');
-    // Route::get('/marks/view', function () {
-    //     return view('marks.view');
-    // });
+   
     Route::get('/marks/view', [MarkController::class, 'showCourseMark'])->name('course.mark.show');
     Route::get('/marks/final/submit', [MarkController::class, 'showFinalMark'])->name('course.final.mark.submit.show');
     Route::post('/marks/final/submit', [MarkController::class, 'storeFinalMark'])->name('course.final.mark.submit.store');
 
     // Exams
     Route::get('/exams/view', [ExamController::class, 'index'])->name('exam.list.show');
-    // Route::get('/exams/view/history', function () {
-    //     return view('exams.history');
-    // });
+
     Route::post('/exams/create', [ExamController::class, 'store'])->name('exam.create');
-    // Route::post('/exams/delete', [ExamController::class, 'delete'])->name('exam.delete');
+
     Route::get('/exams/create', [ExamController::class, 'create'])->name('exam.create.show');
     Route::get('/exams/add-rule', [ExamRuleController::class, 'create'])->name('exam.rule.create');
     Route::post('/exams/add-rule', [ExamRuleController::class, 'store'])->name('exam.rule.store');

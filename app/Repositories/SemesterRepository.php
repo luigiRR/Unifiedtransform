@@ -10,8 +10,8 @@ class SemesterRepository implements SemesterInterface {
     public function create($request) {
         try {
             Semester::create($request);
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to create School Semester. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to create School Semester. '.$e->getMessage());
         }
     }
 

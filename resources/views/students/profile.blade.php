@@ -15,7 +15,7 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-person-lines-fill"></i> Student
+                        <em class="bi bi-person-lines-fill"></em> Student
                     </h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
@@ -49,42 +49,42 @@
                             <div class="col-sm-8 col-md-9">
                                 <div class="p-3 mb-3 border rounded bg-white">
                                     <h6>Student Information</h6>
-                                    <table class="table table-responsive mt-3">
+                                    <table class="table table-responsive mt-3" aria-describedby="ProfileStudent">
                                         <tbody>
                                             <tr>
                                                 <th scope="row">First Name:</th>
                                                 <td>{{$student->first_name}}</td>
-                                                <th>Last Name:</th>
+                                                <th scope="col">Last Name:</th>
                                                 <td>{{$student->last_name}}</td>
                                             </tr>
                                             <tr>
                                                 <th scope="row">Email:</th>
                                                 <td>{{$student->email}}</td>
-                                                <th>Birthday:</th>
+                                                <th scope="col">Birthday:</th>
                                                 <td>{{$student->birthday}}</td>
                                             </tr>
                                             <tr>
                                                 <th scope="row">Nationality:</th>
                                                 <td>{{$student->nationality}}</td>
-                                                <th>Religion:</th>
+                                                <th scope="col">Religion:</th>
                                                 <td>{{$student->religion}}</td>
                                             </tr>
                                             <tr>
                                                 <th scope="row">Address:</th>
                                                 <td>{{$student->address}}</td>
-                                                <th>Address2:</th>
+                                                <th scope="col">Address2:</th>
                                                 <td>{{$student->address2}}</td>
                                             </tr>
                                             <tr>
                                                 <th scope="row">City:</th>
                                                 <td>{{$student->city}}</td>
-                                                <th>Zip:</th>
+                                                <th scope="col">Zip:</th>
                                                 <td>{{$student->zip}}</td>
                                             </tr>
                                             <tr>
                                                 <th scope="row">Blood Type:</th>
                                                 <td>{{$student->blood_type}}</td>
-                                                <th>Phone:</th>
+                                                <th scope="col">Phone:</th>
                                                 <td>{{$student->phone}}</td>
                                             </tr>
                                             <tr>
@@ -96,18 +96,18 @@
                                 </div>
                                 <div class="p-3 mb-3 border rounded bg-white">
                                     <h6>Parents' Information</h6>
-                                    <table class="table table-responsive mt-3">
+                                    <table class="table table-responsive mt-3" aria-describedby="InfoParents">
                                         <tbody>
                                             <tr>
                                                 <th scope="row">Father's Name:</th>
                                                 <td>{{$student->parent_info->father_name}}</td>
-                                                <th>Mother's Name:</th>
+                                                <th scope="col">Mother's Name:</th>
                                                 <td>{{$student->parent_info->mother_name}}</td>
                                             </tr>
                                             <tr>
                                                 <th scope="row">Father's Phone:</th>
                                                 <td>{{$student->parent_info->father_phone}}</td>
-                                                <th>Mother's Phone:</th>
+                                                <th scope="col">Mother's Phone:</th>
                                                 <td>{{$student->parent_info->mother_phone}}</td>
                                             </tr>
                                             <tr>
@@ -119,12 +119,12 @@
                                 </div>
                                 <div class="p-3 mb-3 border rounded bg-white">
                                     <h6>Academic Information</h6>
-                                    <table class="table table-responsive mt-3">
+                                    <table class="table table-responsive mt-3" aria-describedby="ClassesSection">
                                         <tbody>
                                             <tr>
                                                 <th scope="row">Class:</th>
                                                 <td>{{$promotion_info->section->schoolClass->class_name}}</td>
-                                                <th>Board Reg. No.:</th>
+                                                <th scope="col">Board Reg. No.:</th>
                                                 <td>{{$student->academic_info->board_reg_no}}</td>
                                             </tr>
                                             <tr>

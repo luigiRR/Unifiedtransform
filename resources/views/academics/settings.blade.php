@@ -9,7 +9,7 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-tools"></i> Academic Settings
+                        <em class="bi bi-tools"></em> Academic Settings
                     </h1>
 
                     @include('session-messages')
@@ -21,14 +21,14 @@
                                 <div class="p-3 border bg-light shadow-sm">
                                     <h6>Create Session</h6>
                                     <p class="text-danger">
-                                        <small><i class="bi bi-exclamation-diamond-fill me-2"></i> Create one Session per academic year. Last created session will be considered as the latest academic session.</small>
+                                        <small><em class="bi bi-exclamation-diamond-fill me-2"></em> Create one Session per academic year. Last created session will be considered as the latest academic session.</small>
                                     </p>
                                     <form action="{{route('school.session.store')}}" method="POST">
                                         @csrf
                                         <div class="mb-3">
                                             <input type="text" class="form-control form-control-sm" placeholder="2021 - 2022" aria-label="Current Session" name="session_name" required>
                                         </div>
-                                        <button class="btn btn-sm btn-outline-primary" type="submit"><i class="bi bi-check2"></i> Create</button>
+                                        <button class="btn btn-sm btn-outline-primary" type="submit"><em class="bi bi-check2"></em> Create</button>
                                     </form>
                                 </div>
                             </div>
@@ -37,7 +37,7 @@
                                 <div class="p-3 border bg-light shadow-sm">
                                     <h6>Browse by Session</h6>
                                     <p class="text-danger">
-                                        <small><i class="bi bi-exclamation-diamond-fill me-2"></i> Only use this when you want to browse data from previous Sessions.</small>
+                                        <small><em class="bi bi-exclamation-diamond-fill me-2"></em> Only use this when you want to browse data from previous Sessions.</small>
                                     </p>
                                     <form action="{{route('school.session.browse')}}" method="POST">
                                         @csrf
@@ -51,7 +51,7 @@
                                             @endisset
                                         </select>
                                     </div>
-                                    <button class="btn btn-sm btn-outline-primary" type="submit"><i class="bi bi-check2"></i> Set</button>
+                                    <button class="btn btn-sm btn-outline-primary" type="submit"><em class="bi bi-check2"></em> Set</button>
                                     </form>
                                 </div>
                             </div>
@@ -63,18 +63,18 @@
                                         @csrf
                                     <input type="hidden" name="session_id" value="{{$current_school_session_id}}">
                                     <div class="mt-2">
-                                        <p>Semester name<sup><i class="bi bi-asterisk text-primary"></i></sup></p>
+                                        <p>Semester name<sup><em class="bi bi-asterisk text-primary"></em></sup></p>
                                         <input type="text" class="form-control form-control-sm" placeholder="First Semester" aria-label="Semester name" name="semester_name" required>
                                     </div>
                                     <div class="mt-2">
-                                        <label for="inputStarts" class="form-label">Starts<sup><i class="bi bi-asterisk text-primary"></i></sup></label>
+                                        <label for="inputStarts" class="form-label">Starts<sup><em class="bi bi-asterisk text-primary"></em></sup></label>
                                         <input type="date" class="form-control form-control-sm" id="inputStarts" placeholder="Starts" name="start_date" required>
                                     </div>
                                     <div class="mt-2">
-                                        <label for="inputEnds" class="form-label">Ends<sup><i class="bi bi-asterisk text-primary"></i></sup></label>
+                                        <label for="inputEnds" class="form-label">Ends<sup><em class="bi bi-asterisk text-primary"></em></sup></label>
                                         <input type="date" class="form-control form-control-sm" id="inputEnds" placeholder="Ends" name="end_date" required>
                                     </div>
-                                    <button type="submit" class="mt-3 btn btn-sm btn-outline-primary"><i class="bi bi-check2"></i> Create</button>
+                                    <button type="submit" class="mt-3 btn btn-sm btn-outline-primary"><em class="bi bi-check2"></em> Create</button>
                                 </form>
                                 </div>
                             </div>
@@ -82,7 +82,7 @@
                                 <div class="p-3 border bg-light shadow-sm">
                                     <h6>Attendance Type</h6>
                                     <p class="text-danger">
-                                        <small><i class="bi bi-exclamation-diamond-fill me-2"></i> Do not change the type in the middle of a Semester.</small>
+                                        <small><em class="bi bi-exclamation-diamond-fill me-2"></em> Do not change the type in the middle of a Semester.</small>
                                     </p>
                                     <form action="{{route('school.attendance.type.update')}}" method="POST">
                                         @csrf
@@ -99,7 +99,7 @@
                                             </label>
                                         </div>
 
-                                        <button type="submit" class="mt-3 btn btn-sm btn-outline-primary"><i class="bi bi-check2"></i> Save</button>
+                                        <button type="submit" class="mt-3 btn btn-sm btn-outline-primary"><em class="bi bi-check2"></em> Save</button>
                                     </form>
                                 </div>
                             </div>
@@ -112,7 +112,7 @@
                                         <div class="mb-3">
                                             <input type="text" class="form-control form-control-sm" name="class_name" placeholder="Class name" aria-label="Class name" required>
                                         </div>
-                                        <button class="btn btn-sm btn-outline-primary" type="submit"><i class="bi bi-check2"></i> Create</button>
+                                        <button class="btn btn-sm btn-outline-primary" type="submit"><em class="bi bi-check2"></em> Create</button>
                                     </form>
                                 </div>
                             </div>
@@ -138,7 +138,7 @@
                                                 @endisset
                                             </select>
                                         </div>
-                                        <button type="submit" class="mt-3 btn btn-sm btn-outline-primary"><i class="bi bi-check2"></i> Save</button>
+                                        <button type="submit" class="mt-3 btn btn-sm btn-outline-primary"><em class="bi bi-check2"></em> Save</button>
                                     </form>
                                 </div>
                             </div>
@@ -152,7 +152,7 @@
                                             <input type="text" class="form-control form-control-sm" name="course_name" placeholder="Course name" aria-label="Course name" required>
                                         </div>
                                         <div class="mb-3">
-                                            <p class="mt-2">Course Type:<sup><i class="bi bi-asterisk text-primary"></i></sup></p>
+                                            <p class="mt-2">Course Type:<sup><em class="bi bi-asterisk text-primary"></em></sup></p>
                                             <select class="form-select form-select-sm" name="course_type" aria-label=".form-select-sm" required>
                                                 <option value="Core">Core</option>
                                                 <option value="General">General</option>
@@ -161,7 +161,7 @@
                                             </select>
                                         </div>
                                         <div class="mb-3">
-                                            <p>Assign to semester:<sup><i class="bi bi-asterisk text-primary"></i></sup></p>
+                                            <p>Assign to semester:<sup><em class="bi bi-asterisk text-primary"></em></sup></p>
                                             <select class="form-select form-select-sm" aria-label=".form-select-sm" name="semester_id" required>
                                                 @isset($semesters)
                                                     @foreach ($semesters as $semester)
@@ -171,7 +171,7 @@
                                             </select>
                                         </div>
                                         <div class="mb-3">
-                                            <p>Assign to class:<sup><i class="bi bi-asterisk text-primary"></i></sup></p>
+                                            <p>Assign to class:<sup><em class="bi bi-asterisk text-primary"></em></sup></p>
                                             <select class="form-select form-select-sm" aria-label=".form-select-sm" name="class_id" required>
                                                 @isset($school_classes)
                                                     @foreach ($school_classes as $school_class)
@@ -180,7 +180,7 @@
                                                 @endisset
                                             </select>
                                         </div>
-                                        <button class="btn btn-sm btn-outline-primary" type="submit"><i class="bi bi-check2"></i> Create</button>
+                                        <button class="btn btn-sm btn-outline-primary" type="submit"><em class="bi bi-check2"></em> Create</button>
                                     </form>
                                 </div>
                             </div>
@@ -191,7 +191,7 @@
                                         @csrf
                                         <input type="hidden" name="session_id" value="{{$current_school_session_id}}">
                                         <div class="mb-3">
-                                            <p class="mt-2">Select Teacher:<sup><i class="bi bi-asterisk text-primary"></i></sup></p>
+                                            <p class="mt-2">Select Teacher:<sup><em class="bi bi-asterisk text-primary"></em></sup></p>
                                             <select class="form-select form-select-sm" aria-label=".form-select-sm" name="teacher_id" required>
                                                 @isset($teachers)
                                                     @foreach ($teachers as $teacher)
@@ -201,7 +201,7 @@
                                             </select>
                                         </div>
                                         <div class="mb-3">
-                                            <p>Assign to semester:<sup><i class="bi bi-asterisk text-primary"></i></sup></p>
+                                            <p>Assign to semester:<sup><em class="bi bi-asterisk text-primary"></em></sup></p>
                                             <select class="form-select form-select-sm" aria-label=".form-select-sm" name="semester_id" required>
                                                 @isset($semesters)
                                                     @foreach ($semesters as $semester)
@@ -211,7 +211,7 @@
                                             </select>
                                         </div>
                                         <div>
-                                            <p>Assign to class:<sup><i class="bi bi-asterisk text-primary"></i></sup></p>
+                                            <p>Assign to class:<sup><em class="bi bi-asterisk text-primary"></em></sup></p>
                                             <select onchange="getSectionsAndCourses(this);" class="form-select form-select-sm" aria-label=".form-select-sm" name="class_id" required>
                                                 @isset($school_classes)
                                                     <option selected disabled>Please select a class</option>
@@ -222,16 +222,16 @@
                                             </select>
                                         </div>
                                         <div>
-                                            <p class="mt-2">Assign to section:<sup><i class="bi bi-asterisk text-primary"></i></sup></p>
+                                            <p class="mt-2">Assign to section:<sup><em class="bi bi-asterisk text-primary"></em></sup></p>
                                             <select class="form-select form-select-sm" id="section-select" aria-label=".form-select-sm" name="section_id" required>
                                             </select>
                                         </div>
                                         <div>
-                                            <p class="mt-2">Assign to course:<sup><i class="bi bi-asterisk text-primary"></i></sup></p>
+                                            <p class="mt-2">Assign to course:<sup><em class="bi bi-asterisk text-primary"></em></sup></p>
                                             <select class="form-select form-select-sm" id="course-select" aria-label=".form-select-sm" name="course_id" required>
                                             </select>
                                         </div>
-                                        <button type="submit" class="mt-3 btn btn-sm btn-outline-primary"><i class="bi bi-check2"></i> Save</button>
+                                        <button type="submit" class="mt-3 btn btn-sm btn-outline-primary"><em class="bi bi-check2"></em> Save</button>
                                     </form>
                                 </div>
                             </div>
@@ -241,16 +241,16 @@
                                     <form action="{{route('school.final.marks.submission.status.update')}}" method="POST">
                                         @csrf
                                         <p class="text-danger">
-                                            <small><i class="bi bi-exclamation-diamond-fill me-2"></i> Usually teachers are allowed to submit final marks just before the end of a "Semester".</small>
+                                            <small><em class="bi bi-exclamation-diamond-fill me-2"></em> Usually teachers are allowed to submit final marks just before the end of a "Semester".</small>
                                         </p>
                                         <p class="text-primary">
-                                            <small><i class="bi bi-exclamation-diamond-fill me-2"></i> Disallow at the start of a "Semester".</small>
+                                            <small><em class="bi bi-exclamation-diamond-fill me-2"></em> Disallow at the start of a "Semester".</small>
                                         </p>
                                         <div class="form-check form-switch">
                                             <input class="form-check-input" type="checkbox" name="marks_submission_status" id="marks_submission_status_check" {{($academic_setting->marks_submission_status == 'on')?'checked="checked"':null}}>
                                             <label class="form-check-label" for="marks_submission_status_check">{{($academic_setting->marks_submission_status == 'on')?'Allowed':'Disallowed'}}</label>
                                         </div>
-                                        <button type="submit" class="mt-3 btn btn-sm btn-outline-primary"><i class="bi bi-check2"></i> Save</button>
+                                        <button type="submit" class="mt-3 btn btn-sm btn-outline-primary"><em class="bi bi-check2"></em> Save</button>
                                     </form>
                                 </div>
                             </div>

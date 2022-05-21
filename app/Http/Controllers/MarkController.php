@@ -89,7 +89,7 @@ class MarkController extends Controller
         }
 
         foreach($marks as $mark_key => $mark) {
-            foreach ($gradingSystemRules as $key => $gradingSystemRule) {
+            foreach ($gradingSystemRules as $gradingSystemRule) {
                 if($mark->final_marks >= $gradingSystemRule->start_at && $mark->final_marks <= $gradingSystemRule->end_at) {
                     $marks[$mark_key]['point'] = $gradingSystemRule->point;
                     $marks[$mark_key]['grade'] = $gradingSystemRule->grade;
@@ -306,7 +306,7 @@ class MarkController extends Controller
         }
 
         foreach($finalMarks as $mark_key => $mark) {
-            foreach ($gradingSystemRules as $key => $gradingSystemRule) {
+            foreach ($gradingSystemRules as $gradingSystemRule) {
                 if($mark->final_marks >= $gradingSystemRule->start_at && $mark->final_marks <= $gradingSystemRule->end_at) {
                     $finalMarks[$mark_key]['point'] = $gradingSystemRule->point;
                     $finalMarks[$mark_key]['grade'] = $gradingSystemRule->grade;

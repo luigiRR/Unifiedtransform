@@ -9,8 +9,8 @@ class SectionRepository implements SectionInterface {
     public function create($request) {
         try {
             Section::create($request);
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to create School Section. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to create School Section. '.$e->getMessage());
         }
     }
 
@@ -32,8 +32,8 @@ class SectionRepository implements SectionInterface {
                 'section_name'  => $request->section_name,
                 'room_no'       => $request->room_no,
             ]);
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to update School Section. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to update School Section. '.$e->getMessage());
         }
     }
 }

@@ -8,7 +8,7 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-sort-numeric-up-alt"></i> Promote Class Section
+                        <em class="bi bi-sort-numeric-up-alt"></em> Promote Class Section
                     </h1>
                     <h6>Filter list by:</h6>
                     <div class="mb-4 mt-4">
@@ -25,11 +25,11 @@
                                     </select>
                                 </div>
                                 <div class="col">
-                                    <button type="submit" class="btn btn-primary"><i class="bi bi-arrow-counterclockwise"></i> Load List</button>
+                                    <button type="submit" class="btn btn-primary"><em class="bi bi-arrow-counterclockwise"></em> Load List</button>
                                 </div>
                             </div>
                         </form>
-                        <table class="table mt-4">
+                        <table class="table mt-4" aria-describedby="PreviousSessionSections">
                             <thead>
                                 <tr>
                                     <th scope="col">Section Name</th>
@@ -48,7 +48,7 @@
                                                 No action needed
                                             @else
                                                 <div class="btn-group" role="group">
-                                                    <a href="{{route('promotions.create', ['previousSessionId' => $previousSessionId,'previous_section_id' => $previousSessionSection->section->id, 'previous_class_id' => $class_id])}}" role="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-sort-numeric-up-alt"></i> Promote</a>
+                                                    <a href="{{route('promotions.create', ['previousSessionId' => $previousSessionId,'previous_section_id' => $previousSessionSection->section->id, 'previous_class_id' => $class_id])}}" role="button" class="btn btn-sm btn-outline-primary"><em class="bi bi-sort-numeric-up-alt"></em> Promote</a>
                                                 </div>
                                             @endif
                                         </td>

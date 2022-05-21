@@ -21,14 +21,19 @@ class CourseStoreRequest extends FormRequest
      *
      * @return array
      */
+    
     public function rules()
     {
+        $message = 'required|integer|gt:0';
         return [
             'course_name'  => 'required',
             'course_type'  => 'required',
-            'class_id'     => 'required|integer|gt:0',
+            /*'class_id'     => 'required|integer|gt:0',
             'semester_id'  => 'required|integer|gt:0',
-            'session_id'   => 'required|integer|gt:0',
+            'session_id'   => 'required|integer|gt:0',*/
+            'class_id'     => ($message),
+            'semester_id'  => ($message),
+            'session_id'   => ($message)
         ];
     }
 }

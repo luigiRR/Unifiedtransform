@@ -7,7 +7,7 @@
         <div class="col-xs-11 col-sm-11 col-md-11 col-lg-10 col-xl-10 col-xxl-10">
             <div class="row pt-2">
                 <div class="col ps-4">
-                    <h1 class="display-6 mb-3"><i class="bi bi-diagram-2"></i> Edit Section</h1>
+                    <h1 class="display-6 mb-3"><em class="bi bi-diagram-2"></em> Edit Section</h1>
                     @include('session-messages')
                     <div class="row">
                         <form class="col-6" action="{{route('school.section.update')}}" method="POST">
@@ -22,7 +22,7 @@
                                 <label for="room_no" class="form-label">Room number</label>
                                 <input class="form-control" id="room_no" name="room_no" type="text" value="{{$section->room_no}}">
                             </div>
-                            <button type="submit" class="btn btn-outline-primary"><i class="bi bi-check2"></i> Save</button>
+                            <button type="submit" class="btn btn-outline-primary"><em class="bi bi-check2"></em> Save</button>
                         </form>
                     </div>
                 </div>

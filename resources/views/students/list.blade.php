@@ -8,7 +8,7 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-person-lines-fill"></i> Student List
+                        <em class="bi bi-person-lines-fill"></em> Student List
                     </h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
@@ -36,12 +36,12 @@
                                 </select>
                             </div>
                             <div class="col">
-                                <button type="submit" class="btn btn-primary"><i class="bi bi-arrow-counterclockwise"></i> Load List</button>
+                                <button type="submit" class="btn btn-primary"><em class="bi bi-arrow-counterclockwise"></em> Load List</button>
                             </div>
                         </form>
                         @foreach ($studentList as $student)
                             @if ($loop->first)
-                                <p class="mt-3"><b>Section:</b> {{$student->section->section_name}}</p>
+                                <p class="mt-3"><strong>Section:</strong> {{$student->section->section_name}}</p>
                                 @break
                             @endif
                         @endforeach
@@ -66,7 +66,7 @@
                                             @if (isset($student->student->photo))
                                                 <img src="{{asset('/storage'.$student->student->photo)}}" class="rounded" alt="Profile picture" height="30" width="30">
                                             @else
-                                                <i class="bi bi-person-square"></i>
+                                                <em class="bi bi-person-square"></em>
                                             @endif
                                         </td>
                                         <td>{{$student->student->first_name}}</td>
@@ -75,12 +75,12 @@
                                         <td>{{$student->student->phone}}</td>
                                         <td>
                                             <div class="btn-group" role="group">
-                                                <a href="{{route('student.attendance.show', ['id' => $student->student->id])}}" role="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-eye"></i> Attendance</a>
-                                                <a href="{{url('students/view/profile/'.$student->student->id)}}" role="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-eye"></i> Profile</a>
+                                                <a href="{{route('student.attendance.show', ['id' => $student->student->id])}}" role="button" class="btn btn-sm btn-outline-primary"><em class="bi bi-eye"></em> Attendance</a>
+                                                <a href="{{url('students/view/profile/'.$student->student->id)}}" role="button" class="btn btn-sm btn-outline-primary"><em class="bi bi-eye"></em> Profile</a>
                                                 @can('edit users')
-                                                <a href="{{route('student.edit.show', ['id' => $student->student->id])}}" role="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-pen"></i> Edit</a>
+                                                <a href="{{route('student.edit.show', ['id' => $student->student->id])}}" role="button" class="btn btn-sm btn-outline-primary"><em class="bi bi-pen"></em> Edit</a>
                                                 @endcan
-                                                {{-- <button type="button" class="btn btn-sm btn-primary"><i class="bi bi-trash2"></i> Delete</button> --}}
+                                                {{-- <button type="button" class="btn btn-sm btn-primary"><em class="bi bi-trash2"></em> Delete</button> --}}
                                             </div>
                                         </td>
                                     </tr>

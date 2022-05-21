@@ -8,11 +8,11 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-file-text"></i> View Grading Rule
+                        <em class="bi bi-file-text"></em> View Grading Rule
                     </h1>
                     @include('session-messages')
                     <div class="mb-4 mt-4">
-                        <table class="table mt-4">
+                        <table class="table mt-4" aria-describedby="GradeRules">
                             <thead>
                                 <tr>
                                     <th scope="col">System Name</th>
@@ -35,7 +35,7 @@
                                         <td>
                                             <div class="btn-group" role="group">
                                                 <a href="{{route('exam.grade.system.rule.delete')}}" role="button" class="btn btn-sm btn-primary" onclick="event.preventDefault();
-                                                     document.getElementById('delete-form-{{$gradeRule->id}}').submit();"><i class="bi bi-trash2"></i> Delete</a>
+                                                     document.getElementById('delete-form-{{$gradeRule->id}}').submit();"><em class="bi bi-trash2"></em> Delete</a>
                                                 <form id="delete-form-{{$gradeRule->id}}" action="{{ route('exam.grade.system.rule.delete') }}" method="POST" class="d-none">
                                                     @csrf
                                                     <input type="hidden" name="id" value="{{$gradeRule->id}}">

@@ -1,18 +1,18 @@
 @if (session('status'))
     <p class="text-success">
-        <i class="bi bi-exclamation-diamond-fill me-2"></i> {{ session('status') }}
+        <em class="bi bi-exclamation-diamond-fill me-2"></em> {{ session('status') }}
     </p>
 @endif
 @if (session('error'))
     <p class="text-danger">
-        <i class="bi bi-exclamation-diamond-fill me-2"></i> {{ session('error') }}
+        <em class="bi bi-exclamation-diamond-fill me-2"></em> {{ session('error') }}
     </p>
 @endif
 
 @if ($errors->any())
     @foreach ($errors->all() as $error)
         <p class="text-danger">
-            <i class="bi bi-exclamation-diamond-fill me-2"></i>
+            <em class="bi bi-exclamation-diamond-fill me-2"></em>
             {{ $error }}
         </p>
     @endforeach

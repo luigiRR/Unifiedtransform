@@ -24,7 +24,6 @@ class HomeController extends Controller
     public function __construct(
         UserInterface $userRepository, SchoolSessionInterface $schoolSessionRepository, SchoolClassInterface $schoolClassRepository)
     {
-        // $this->middleware('auth');
         $this->userRepository = $userRepository;
         $this->schoolSessionRepository = $schoolSessionRepository;
         $this->schoolClassRepository = $schoolClassRepository;

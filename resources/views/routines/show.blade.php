@@ -7,7 +7,7 @@
         <div class="col-xs-11 col-sm-11 col-md-11 col-lg-10 col-xl-10 col-xxl-10">
             <div class="row pt-2">
                 <div class="col ps-4">
-                    <h1 class="display-6 mb-3"><i class="bi bi-calendar4-range"></i> Routine</h1>
+                    <h1 class="display-6 mb-3"><em class="bi bi-calendar4-range"></em> Routine</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
@@ -38,11 +38,11 @@
                     @endphp
                     @if(count($routines) > 0)
                     <div class="bg-white p-3 border shadow-sm">
-                        <table class="table table-bordered text-center">
+                        <table class="table table-bordered text-center" aria-describedby="RoutinesDay">
                             </thead>
                             <tbody>
                                 @foreach($routines as $day => $courses)
-                                    <tr><th>{{getDayName($day)}}</th>
+                                    <tr><th scope="col">{{getDayName($day)}}</th>
                                         @php
                                             $courses = $courses->sortBy('start');
                                         @endphp

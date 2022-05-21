@@ -7,12 +7,12 @@
         <div class="col-xs-11 col-sm-11 col-md-11 col-lg-10 col-xl-10 col-xxl-10">
             <div class="row pt-2">
                 <div class="col ps-4">
-                    <h1 class="display-6 mb-3"><i class="bi bi-distribute-vertical"></i> Exam History</h1>
+                    <h1 class="display-6 mb-3"><em class="bi bi-distribute-vertical"></em> Exam History</h1>
                     <div class="row">
                         <div class="col-12">
                             <div class="card border-dark my-3">
                                 <div class="card-header bg-transparent border-dark">
-                                    <i class="bi bi-diagram-2"></i> Class 1
+                                    <em class="bi bi-diagram-2"></em> Class 1
                                 </div>
                                 <div class="card-body text-dark">
                                     <div class="accordion" id="accordionExample">

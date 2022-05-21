@@ -8,7 +8,7 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-cloud-sun"></i> View Results
+                        <em class="bi bi-cloud-sun"></em> View Results
                     </h1>
                     <h6>Filter list by:</h6>
                     <div class="mb-4 mt-4">
@@ -42,12 +42,12 @@
                                     </select>
                                 </div>
                                 <div class="col">
-                                    <button type="submit" class="btn btn-primary"><i class="bi bi-arrow-counterclockwise"></i> Load List</button>
+                                    <button type="submit" class="btn btn-primary"><em class="bi bi-arrow-counterclockwise"></em> Load List</button>
                                 </div>
                             </div>
                         </form>
                         <div class="bg-white border mt-4 p-3 shadow-sm">
-                            <table class="table">
+                            <table class="table" aria-describedby="StudentMarks">
                                 <thead>
                                     <tr>
                                         <th scope="col">Photo</th>
@@ -61,7 +61,7 @@
                                     @isset($marks)
                                         @foreach ($marks as $mark)
                                         <tr>
-                                            <td><i class="bi bi-person-square"></i></td>
+                                            <td><em class="bi bi-person-square"></em></td>
                                             <td>{{$mark->student->first_name}} {{$mark->student->last_name}}</td>
                                             <td>{{$mark->final_marks}}</td>
                                             <td>{{$mark->getAttribute('point')}}</td>

@@ -15,7 +15,7 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-person-lines-fill"></i> Teacher
+                        <em class="bi bi-person-lines-fill"></em> Teacher
                     </h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
@@ -47,12 +47,12 @@
                             <div class="col-sm-8 col-md-9">
                                 <div class="p-3 mb-3 border rounded bg-white">
                                     <h6>Teacher Information</h6>
-                                    <table class="table table-responsive mt-3">
+                                    <table class="table table-responsive mt-3" aria-describedby="TeachersProfile">
                                         <tbody>
                                             <tr>
                                                 <th scope="row">First Name:</th>
                                                 <td>{{$teacher->first_name}}</td>
-                                                <th>Last Name:</th>
+                                                <th scope="col">Last Name:</th>
                                                 <td>{{$teacher->last_name}}</td>
                                             </tr>
                                             <tr>
@@ -66,19 +66,19 @@
                                             <tr>
                                                 <th scope="row">Address:</th>
                                                 <td>{{$teacher->address}}</td>
-                                                <th>Address2:</th>
+                                                <th scope="col">Address2:</th>
                                                 <td>{{$teacher->address2}}</td>
                                             </tr>
                                             <tr>
                                                 <th scope="row">City:</th>
                                                 <td>{{$teacher->city}}</td>
-                                                <th>Zip:</th>
+                                                <th scope="col">Zip:</th>
                                                 <td>{{$teacher->zip}}</td>
                                             </tr>
                                             <tr>
                                                 <th scope="row">Phone:</th>
                                                 <td>{{$teacher->phone}}</td>
-                                                <th>Gender:</th>
+                                                <th scope="col">Gender:</th>
                                                 <td>{{$teacher->gender}}</td>
                                             </tr>
                                             <tr>

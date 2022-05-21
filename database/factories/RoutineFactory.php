@@ -22,7 +22,13 @@ class RoutineFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'start' => '08:00 am',
+            'end' => '10:00 pm',
+            'weekday' => 'Monday',
+            'class_id' => 'clase 2',
+            'section_id' => 'seccion 2',
+            'course_id' => 'matematica',
+            'session_id' => 'sesion 2'
         ];
     }
 }

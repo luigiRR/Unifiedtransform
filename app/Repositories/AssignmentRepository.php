@@ -21,8 +21,8 @@ class AssignmentRepository {
                 'semester_id'               => $request['semester_id'],
                 'session_id'                => $request['session_id']
             ]);
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to create assignment. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to create assignment. '.$e->getMessage());
         }
     }
 

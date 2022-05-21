@@ -30,8 +30,8 @@ class SchoolSessionRepository implements SchoolSessionInterface {
     public function create($request) {
         try {
             SchoolSession::create($request);
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to create School Session. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to create School Session. '.$e->getMessage());
         }
     }
 
@@ -45,8 +45,8 @@ class SchoolSessionRepository implements SchoolSessionInterface {
                 session(['browse_session_id' => $request['session_id']]);
                 session(['browse_session_name' => $this->getSessionById($request['session_id'])->session_name]);
             }
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to set School Session for browsing. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to set School Session for browsing. '.$e->getMessage());
         }
     }
 

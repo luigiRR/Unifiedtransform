@@ -23,11 +23,15 @@ class GradingSystemStoreRequest extends FormRequest
      */
     public function rules()
     {
+        $message = 'required|integer';
         return [
-            'system_name'   => 'required|string',
-            'class_id'      => 'required|integer',
+            'system_name'   => ($message),
+            /*'class_id'      => 'required|integer',
             'semester_id'   => 'required|integer',
-            'session_id'    => 'required|integer'
+            'session_id'    => 'required|integer'*/
+            'class_id'      => ($message),
+            'semester_id'   => ($message),
+            'session_id'    => ($message)
         ];
     }
 }

@@ -11,8 +11,8 @@ class StudentAcademicInfoRepository {
                 'student_id'        => $student_id,
                 'board_reg_no'      => $request['board_reg_no'],
             ]);
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to create Student academic information. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to create Student academic information. '.$e->getMessage());
         }
     }
 }

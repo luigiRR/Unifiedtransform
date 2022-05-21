@@ -11,8 +11,8 @@ class NoticeRepository {
                 'notice'        => $request['notice'],
                 'session_id'    => $request['session_id'],
             ]);
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to save Notice. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to save Notice. '.$e->getMessage());
         }
     }
 

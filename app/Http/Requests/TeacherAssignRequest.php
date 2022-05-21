@@ -23,13 +23,14 @@ class TeacherAssignRequest extends FormRequest
      */
     public function rules()
     {
+        $message = 'required|integer';
         return [
-            'course_id'             => 'required|integer',
-            'semester_id'           => 'required|integer',
-            'class_id'              => 'required|integer',
-            'section_id'            => 'required|integer',
-            'teacher_id'            => 'required|integer',
-            'session_id'            => 'required|integer',
+            'course_id'             => ($message),
+            'semester_id'           => ($message),
+            'class_id'              => ($message),
+            'section_id'            => ($message),
+            'teacher_id'            => ($message),
+            'session_id'            => ($message),
         ];
     }
 }

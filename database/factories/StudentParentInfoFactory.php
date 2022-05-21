@@ -22,7 +22,12 @@ class StudentParentInfoFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'student_id' => 1,
+            'father_name' => $this->faker->name(),
+            'father_phone' => '951852746',
+            'mother_name' => $this->faker->name(),
+            'mother_phone' => '963148456',
+            'parent_address' => $this->faker->address(),
         ];
     }
 }

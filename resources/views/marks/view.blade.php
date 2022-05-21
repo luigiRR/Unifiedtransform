@@ -8,14 +8,14 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-cloud-sun"></i> View Marks
+                        <em class="bi bi-cloud-sun"></em> View Marks
                     </h1>
-                    <h5><i class="bi bi-diagram-2"></i> Class 1, Section #1 </h5>
-                    <h5><i class="bi bi-compass"></i> Course: Math </h5>
+                    <h5><em class="bi bi-diagram-2"></em> Class 1, Section #1 </h5>
+                    <h5><em class="bi bi-compass"></em> Course: Math </h5>
                     <div class="row mt-3">
                         <div class="col">
                             <div class="table-responsive">
-                                <table class="table table-hover">
+                                <table class="table table-hover" aria-describedby="Total">
                                     <thead>
                                         <tr>
                                         <th scope="col">#ID</th>
@@ -35,7 +35,7 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <th>1012</th>
+                                            <th scope="col">1012</th>
                                             <td>hamsterclover</td>
                                             <td>4,230</td>
                                             <td>9</td>
@@ -50,7 +50,7 @@
                                             <td>9</td>
                                         </tr>
                                         <tr>
-                                            <th>1013</th>
+                                            <th scope="col">1013</th>
                                             <td>cellofruit</td>
                                             <td>4,126</td>
                                             <td>9</td>
@@ -65,7 +65,7 @@
                                             <td>9</td>
                                         </tr>
                                         <tr>
-                                            <th>1014</th>
+                                            <th scope="col">1014</th>
                                             <td>enchantingsun</td>
                                             <td>4,085</td>
                                             <td>5</td>
@@ -80,7 +80,7 @@
                                             <td>9</td>
                                         </tr>
                                         <tr>
-                                            <th>1015</th>
+                                            <th scope="col">1015</th>
                                             <td>antdory</td>
                                             <td>4,139</td>
                                             <td>7</td>

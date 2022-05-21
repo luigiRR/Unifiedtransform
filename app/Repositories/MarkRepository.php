@@ -20,8 +20,8 @@ class MarkRepository implements MarkInterface {
                     'course_id' => $row['course_id']
                 ],['marks' => $row['marks']]);
             }
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to update students marks. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to update students marks. '.$e->getMessage());
         }
     }
 
@@ -90,8 +90,8 @@ class MarkRepository implements MarkInterface {
                     'note'  => $row['note'],
                 ]);
             }
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to update students final marks. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to update students final marks. '.$e->getMessage());
         }
     }
 }

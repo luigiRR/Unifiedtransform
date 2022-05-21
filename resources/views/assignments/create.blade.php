@@ -8,7 +8,7 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-file-post"></i> Create Assignment
+                        <em class="bi bi-file-post"></em> Create Assignment
                     </h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
@@ -38,7 +38,7 @@
                                         <input type="file" name="file" class="form-control" id="assignment-file" accept=".jpg,.jpeg,.bmp,.png,.gif,.doc,.docx,.csv,.rtf,.xlsx,.xls,.txt,.pdf,.zip" required>
                                     </div>
                                     <div class="mb-4">
-                                        <button type="submit" class="btn btn-outline-primary"><i class="bi bi-check2"></i> Create</button>
+                                        <button type="submit" class="btn btn-outline-primary"><em class="bi bi-check2"></em> Create</button>
                                     </div>
                                 </form>
                             </div>

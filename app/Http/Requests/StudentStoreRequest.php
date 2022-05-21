@@ -23,29 +23,30 @@ class StudentStoreRequest extends FormRequest
      */
     public function rules()
     {
+        $message = 'required|string';
         return [
-            'first_name'        => 'required|string',
-            'last_name'         => 'required|string',
+            'first_name'        => ($message),
+            'last_name'         => ($message),
             'email'             => 'required|string|email|max:255|unique:users',
-            'gender'            => 'required|string',
-            'nationality'       => 'required|string',
-            'phone'             => 'required|string',
-            'address'           => 'required|string',
+            'gender'            => ($message),
+            'nationality'       => ($message),
+            'phone'             => ($message),
+            'address'           => ($message),
             'address2'          => 'nullable|string',
-            'city'              => 'required|string',
-            'zip'               => 'required|string',
+            'city'              => ($message),
+            'zip'               => ($message),
             'photo'             => 'nullable|string',
             'birthday'          => 'required|date',
-            'religion'          => 'required|string',
-            'blood_type'        => 'required|string',
+            'religion'          => ($message),
+            'blood_type'        => ($message),
             'password'          => 'required|string|min:8',
 
             // Parents' information
-            'father_name'       => 'required|string',
-            'father_phone'      => 'required|string',
-            'mother_name'       => 'required|string',
-            'mother_phone'      => 'required|string',
-            'parent_address'    => 'required|string',
+            'father_name'       => ($message),
+            'father_phone'      => ($message),
+            'mother_name'       => ($message),
+            'mother_phone'      => ($message),
+            'parent_address'    => ($message),
 
             // Academic information
             'class_id'          => 'required',

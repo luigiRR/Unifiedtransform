@@ -10,8 +10,8 @@ class CourseRepository implements CourseInterface {
     public function create($request) {
         try {
             Course::create($request);
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to create School Course. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to create School Course. '.$e->getMessage());
         }
     }
 
@@ -33,8 +33,8 @@ class CourseRepository implements CourseInterface {
                 'course_name'  => $request->course_name,
                 'course_type'  => $request->course_type,
             ]);
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to update Course. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to update Course. '.$e->getMessage());
         }
     }
 }

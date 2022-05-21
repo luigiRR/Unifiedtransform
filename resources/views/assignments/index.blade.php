@@ -8,7 +8,7 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-journal-medical"></i> Assignments
+                        <em class="bi bi-journal-medical"></em> Assignments
                     </h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
@@ -19,7 +19,7 @@
                     </nav>
                     <div class="mb-4 mt-4">
                         <div class="p-3 mt-3 bg-white border shadow-sm">
-                            <table class="table">
+                            <table class="table" aria-describedby="Assignment">
                                 <thead>
                                     <tr>
                                         <th scope="col">Assignment Name</th>
@@ -32,7 +32,7 @@
                                             <td>{{$assignment->assignment_name}}</td>
                                             <td>
                                                 <div class="btn-group" role="group">
-                                                    <a href="{{asset('storage/'.$assignment->assignment_file_path)}}" role="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i> Download</a>
+                                                    <a href="{{asset('storage/'.$assignment->assignment_file_path)}}" role="button" class="btn btn-sm btn-outline-primary"><em class="bi bi-download"></em> Download</a>
                                                 </div>
                                             </td>
                                         </tr>

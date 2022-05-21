@@ -7,12 +7,13 @@ use App\Models\Attendance;
 use App\Interfaces\AttendanceInterface;
 
 class AttendanceRepository implements AttendanceInterface {
+
     public function saveAttendance($request) {
         try {
             $input = $this->prepareInput($request);
             Attendance::insert($input);
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to save attendance. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to save attendance. '.$e->getMessage());
         }
     }
 
@@ -35,6 +36,10 @@ class AttendanceRepository implements AttendanceInterface {
         return $input;
     }
 
+    function messageFailed(){
+        $messageFailed = 'Failed to get attendances. ';
+    }
+
     public function getSectionAttendance($class_id, $section_id, $session_id) {
         try {
             return Attendance::with('student')
@@ -43,8 +48,8 @@ class AttendanceRepository implements AttendanceInterface {
                             ->where('session_id', $session_id)
                             ->whereDate('created_at', '=', Carbon::today())
                             ->get();
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to get attendances. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException($messageFailed.$e->getMessage());
         }
     }
 
@@ -56,8 +61,8 @@ class AttendanceRepository implements AttendanceInterface {
                             ->where('session_id', $session_id)
                             ->whereDate('created_at', '=', Carbon::today())
                             ->get();
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to get attendances. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException($messageFailed.$e->getMessage());
         }
     }
 
@@ -67,8 +72,8 @@ class AttendanceRepository implements AttendanceInterface {
                             ->where('student_id', $student_id)
                             ->where('session_id', $session_id)
                             ->get();
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to get attendances. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException($messageFailed.$e->getMessage());
         }
     }
 }

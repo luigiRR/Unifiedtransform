@@ -8,7 +8,7 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-file-text"></i> Exam Rules
+                        <em class="bi bi-file-text"></em> Exam Rules
                     </h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
@@ -18,7 +18,7 @@
                         </ol>
                     </nav>
                     <div class="mb-4 bg-white border shadow-sm p-3">
-                        <table class="table table-responsive">
+                        <table class="table table-responsive" aria-describedby="ExamsRules">
                             <thead>
                                 <tr>
                                     <th scope="col">Total Marks</th>
@@ -37,8 +37,8 @@
                                         <div class="btn-group" role="group">
                                             <a type="button" href="{{route('exam.rule.edit', [
                                                 'exam_rule_id' => $exam_rule->id
-                                            ])}}" class="btn btn-sm btn-outline-primary"><i class="bi bi-pen"></i> Edit</a>
-                                            {{-- <button type="button" class="btn btn-sm btn-primary"><i class="bi bi-trash2"></i> Delete</button> --}}
+                                            ])}}" class="btn btn-sm btn-outline-primary"><em class="bi bi-pen"></em> Edit</a>
+                                            {{-- <button type="button" class="btn btn-sm btn-primary"><em class="bi bi-trash2"></em> Delete</button> --}}
                                         </div>
                                     </td>
                                 </tr>

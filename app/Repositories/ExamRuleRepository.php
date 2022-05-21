@@ -9,8 +9,8 @@ class ExamRuleRepository implements ExamRuleInterface {
     public function create($request) {
         try {
             ExamRule::create($request);
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to create exam rule. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to create exam rule. '.$e->getMessage());
         }
     }
 
@@ -21,8 +21,8 @@ class ExamRuleRepository implements ExamRuleInterface {
                 'pass_marks'    => $request->pass_marks,
                 'marks_distribution_note'   => $request->marks_distribution_note
             ]);
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to update exam rule. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to update exam rule. '.$e->getMessage());
         }
     }
 

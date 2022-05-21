@@ -22,8 +22,8 @@ trait Base64ToFile {
             Storage::disk('public')->put($photoPath, base64_decode($photo));
 
             return $photoPath;
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to save Photo. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to save Photo. '.$e->getMessage());
         }
         
     }

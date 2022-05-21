@@ -11,16 +11,16 @@ class ExamRepository implements ExamInterface {
     public function create($request) {
         try {
             Exam::create($request);
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to create exam. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to create exam. '.$e->getMessage());
         }
     }
 
     public function delete($id) {
         try {
             Exam::destroy($id);
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to delete exam. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to delete exam. '.$e->getMessage());
         }
     }
 

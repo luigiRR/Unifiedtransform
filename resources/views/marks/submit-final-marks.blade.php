@@ -8,11 +8,11 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-cloud-sun"></i> Give Final Marks
+                        <em class="bi bi-cloud-sun"></em> Give Final Marks
                     </h1>
                     @include('session-messages')
-                    <h5><i class="bi bi-diagram-2"></i> Class {{$class_name}}, Section #{{$section_name}}</h5>
-                    <h5><i class="bi bi-compass"></i> Course: {{$course_name}}</h5>
+                    <h5><em class="bi bi-diagram-2"></em> Class {{$class_name}}, Section #{{$section_name}}</h5>
+                    <h5><em class="bi bi-compass"></em> Course: {{$course_name}}</h5>
                     <form action="{{route('course.final.mark.submit.store')}}" method="POST">
                         @csrf
                         <input type="hidden" name="session_id" value="{{$current_school_session_id}}">
@@ -20,7 +20,7 @@
                             <div class="col">
                                 <div class="table-responsive">
                                     
-                                    <table class="table table-hover">
+                                    <table class="table table-hover" aria-describedby="StudentWithMarks">
                                         <thead>
                                             <tr>
                                                 <th scope="col">Student Name</th>
@@ -59,7 +59,7 @@
                             
                         </div>
                         <div class="col-3">
-                            <button type="submit" class="btn btn-outline-primary"><i class="bi bi-check2"></i> Save</button>
+                            <button type="submit" class="btn btn-outline-primary"><em class="bi bi-check2"></em> Save</button>
                         </div>
                     </form>
                 </div>

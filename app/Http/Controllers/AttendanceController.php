@@ -47,21 +47,6 @@ class AttendanceController extends Controller
     public function index()
     {
         return back();
-        // $academic_setting = $this->academicSettingRepository->getAcademicSetting();
-
-        // $current_school_session_id = $this->getSchoolCurrentSession();
-
-        // $classes_and_sections = $this->schoolClassRepository->getClassesAndSections($current_school_session_id);
-        // $courseRepository = new CourseRepository();
-        // $courses = $courseRepository->getAll($current_school_session_id);
-
-        // $data = [
-        //     'academic_setting'      => $academic_setting,
-        //     'classes_and_sections'  => $classes_and_sections,
-        //     'courses'               => $courses,
-        // ];
-
-        // return view('attendances.index', $data);
     }
 
     /**

@@ -8,7 +8,7 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-calendar2-week-fill"></i> View Attendance
+                        <em class="bi bi-calendar2-week-fill"></em> View Attendance
                     </h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
@@ -18,14 +18,14 @@
                         </ol>
                     </nav>
                     @if(request()->query('course_name'))
-                        <h3><i class="bi bi-compass"></i> Course: {{request()->query('course_name')}} </h3>
+                        <h3><em class="bi bi-compass"></em> Course: {{request()->query('course_name')}} </h3>
                     @elseif(request()->query('section_name'))
-                        <h3><i class="bi bi-diagram-2"></i> Section: {{request()->query('section_name')}} </h3>
+                        <h3><em class="bi bi-diagram-2"></em> Section: {{request()->query('section_name')}} </h3>
                     @endif
                     <div class="mt-4">Current Date and Time: {{ date('Y-m-d H:i:s') }}</div>
                     <div class="row mt-4">
                         <div class="col bg-white border shadow-sm pt-2">
-                            <table class="table">
+                            <table class="table" aria-describedby="StudentAttendance">
                                 <thead>
                                     <tr>
                                         <th scope="col">Student Name</th>

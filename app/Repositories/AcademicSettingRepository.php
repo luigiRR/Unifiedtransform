@@ -13,8 +13,8 @@ class AcademicSettingRepository implements AcademicSettingInterface {
     public function updateAttendanceType($request) {
         try {
             AcademicSetting::where('id', 1)->update($request);
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to update attendance type. '.$e->getMessage());
+        } catch (\UnexpectedValueException $e) {
+            throw new \UnexpectedValueException('Failed to update attendance type. '.$e->getMessage());
         }
     }
 
@@ -25,8 +25,8 @@ class AcademicSettingRepository implements AcademicSettingInterface {
         }
         try {
             AcademicSetting::where('id', 1)->update(['marks_submission_status' => $status]);
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to update final marks submission status. '.$e->getMessage());
+        } catch (\UnexpectedValueException $e) {
+            throw new \UnexpectedValueException('Failed to update final marks submission status. '.$e->getMessage());
         }
     }
 }

@@ -8,7 +8,7 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-file-text"></i> Exams
+                        <em class="bi bi-file-text"></em> Exams
                     </h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
@@ -39,12 +39,12 @@
                                     </select>
                                 </div>
                                 <div class="col">
-                                    <button type="submit" class="btn btn-primary"><i class="bi bi-arrow-counterclockwise"></i> Load List</button>
+                                    <button type="submit" class="btn btn-primary"><em class="bi bi-arrow-counterclockwise"></em> Load List</button>
                                 </div>
                             </div>
                         </form>
                         <div class="bg-white mt-4 p-3 border shadow-sm">
-                            <table class="table">
+                            <table class="table" aria-describedby="Exams">
                                 <thead>
                                     <tr>
                                         <th scope="col">Name</th>
@@ -66,11 +66,11 @@
                                             <td>{{$exam->end_date}}</td>
                                             <td>
                                                 <div class="btn-group" role="group">
-                                                    <a href="{{route('exam.rule.create', ['exam_id' => $exam->id])}}" role="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-plus"></i> Add Rule</a>
-                                                    <a href="{{route('exam.rule.show', ['exam_id' => $exam->id])}}" role="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-eye"></i> View Rule</a>
-                                                    {{-- <a href="{{route('exam.edit', ['exam_id' => $exam->id])}}" role="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-pen"></i> Edit</a> --}}
+                                                    <a href="{{route('exam.rule.create', ['exam_id' => $exam->id])}}" role="button" class="btn btn-sm btn-outline-primary"><em class="bi bi-plus"></em> Add Rule</a>
+                                                    <a href="{{route('exam.rule.show', ['exam_id' => $exam->id])}}" role="button" class="btn btn-sm btn-outline-primary"><em class="bi bi-eye"></em> View Rule</a>
+                                                    {{-- <a href="{{route('exam.edit', ['exam_id' => $exam->id])}}" role="button" class="btn btn-sm btn-outline-primary"><em class="bi bi-pen"></em> Edit</a> --}}
                                                     {{-- <a href="{{route('exam.delete')}}" role="button" class="btn btn-sm btn-primary" onclick="event.preventDefault();
-                                                        document.getElementById('exam-delete-form-{{$exam->id}}').submit();"><i class="bi bi-trash2"></i> Delete</a>
+                                                        document.getElementById('exam-delete-form-{{$exam->id}}').submit();"><em class="bi bi-trash2"></em> Delete</a>
                                                     <form id="exam-delete-form-{{$exam->id}}" action="{{ route('exam.delete') }}" method="POST" class="d-none">
                                                         @csrf
                                                         <input type="hidden" name="exam_id" value="{{$exam->id}}">
@@ -91,8 +91,8 @@
                                                     <td>{{$exam->end_date}}</td>
                                                     <td>
                                                         <div class="btn-group" role="group">
-                                                            <a href="{{route('exam.rule.create', ['exam_id' => $exam->id])}}" role="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-plus"></i> Add Rule</a>
-                                                            <a href="{{route('exam.rule.show', ['exam_id' => $exam->id])}}" role="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-eye"></i> View Rule</a>
+                                                            <a href="{{route('exam.rule.create', ['exam_id' => $exam->id])}}" role="button" class="btn btn-sm btn-outline-primary"><em class="bi bi-plus"></em> Add Rule</a>
+                                                            <a href="{{route('exam.rule.show', ['exam_id' => $exam->id])}}" role="button" class="btn btn-sm btn-outline-primary"><em class="bi bi-eye"></em> View Rule</a>
                                                         </div>
                                                     </td>
                                                 </tr>

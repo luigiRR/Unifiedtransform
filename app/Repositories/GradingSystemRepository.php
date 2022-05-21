@@ -8,8 +8,8 @@ class GradingSystemRepository {
     public function store($request) {
         try {
             GradingSystem::create($request);
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to create grading system. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to create grading system. '.$e->getMessage());
         }
     }
 

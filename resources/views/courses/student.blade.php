@@ -8,7 +8,7 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-journal-medical"></i> My Courses
+                        <em class="bi bi-journal-medical"></em> My Courses
                     </h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
@@ -18,7 +18,7 @@
                     </nav>
                     <div class="mb-4 mt-4">
                         <div class="p-3 mt-3 bg-white border shadow-sm">
-                            <table class="table">
+                            <table class="table" aria-describedby="Courses">
                                 <thead>
                                     <tr>
                                         <th scope="col">Course Name</th>
@@ -40,9 +40,9 @@
                                                         'session_id' => $course->session_id,
                                                         'section_id' => $class_info->section_id,
                                                         'student_id' => Auth::user()->id
-                                                        ])}}" role="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-cloud-sun"></i> View Marks</a>
-                                                    <a href="{{route('course.syllabus.index', ['course_id'  => $course->id])}}" role="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-journal-text"></i> View Syllabus</a>
-                                                    <a href="{{route('assignment.list.show', ['course_id' => $course->id])}}" role="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-file-post"></i> View Assignments</a>
+                                                        ])}}" role="button" class="btn btn-sm btn-outline-primary"><em class="bi bi-cloud-sun"></em> View Marks</a>
+                                                    <a href="{{route('course.syllabus.index', ['course_id'  => $course->id])}}" role="button" class="btn btn-sm btn-outline-primary"><em class="bi bi-journal-text"></em> View Syllabus</a>
+                                                    <a href="{{route('assignment.list.show', ['course_id' => $course->id])}}" role="button" class="btn btn-sm btn-outline-primary"><em class="bi bi-file-post"></em> View Assignments</a>
                                                 </div>
                                             </td>
                                         </tr>

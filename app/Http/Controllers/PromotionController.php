@@ -51,7 +51,7 @@ class PromotionController extends Controller
         $promotionRepository = new PromotionRepository();
         $previousSession = $this->schoolSessionRepository->getPreviousSession();
 
-        if(count($previousSession) < 1) {
+        if(!empty($previousSession) < 1) {
             return back()->withError('No previous session');
         }
 

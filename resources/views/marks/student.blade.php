@@ -8,7 +8,7 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-cloud-sun"></i> Course Marks
+                        <em class="bi bi-cloud-sun"></em> Course Marks
                     </h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
@@ -19,7 +19,7 @@
                     </nav>
                     <h5>Course: {{$course_name}}</h5>
                     <div class="mb-4 mt-4 p-3 bg-white border shadow-sm">
-                        <table class="table">
+                        <table class="table" aria-describedby="ExasMarks">
                             <thead>
                                 <tr>
                                     <th scope="col">Exam Name</th>
@@ -40,7 +40,7 @@
                     @if(count($final_marks) > 0)
                     <h5>Final Result</h5>
                     <div class="bg-white border mt-4 p-3 shadow-sm">
-                        <table class="table">
+                        <table class="table" aria-describedby="FinalMarks">
                             <thead>
                                 <tr>
                                     <th scope="col">Total Marks</th>

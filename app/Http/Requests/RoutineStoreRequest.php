@@ -23,14 +23,20 @@ class RoutineStoreRequest extends FormRequest
      */
     public function rules()
     {
+        $message = 'required|integer';
         return [
             'start'                 => 'required',
             'end'                   => 'required',
-            'weekday'               => 'required|integer',
+            /*'weekday'               => 'required|integer',
             'class_id'              => 'required|integer',
             'section_id'            => 'required|integer',
             'course_id'             => 'required|integer',
-            'session_id'            => 'required|integer',
+            'session_id'            => 'required|integer',*/
+            'weekday'               => ($message),
+            'class_id'              => ($message),
+            'section_id'            => ($message),
+            'course_id'             => ($message),
+            'session_id'            => ($message)
         ];
     }
 }

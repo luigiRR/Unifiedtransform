@@ -57,8 +57,8 @@ class UserRepository implements UserInterface {
                     'view notices',
                 );
             });
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to create Teacher. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to create Teacher. '.$e->getMessage());
         }
     }
 
@@ -113,8 +113,8 @@ class UserRepository implements UserInterface {
                     'view notices',
                 );
             });
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to create Student. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to create Student. '.$e->getMessage());
         }
     }
 
@@ -145,8 +145,8 @@ class UserRepository implements UserInterface {
                 $promotionRepository = new PromotionRepository();
                 $promotionRepository->update($request, $request['student_id']);
             });
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to update Student. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to update Student. '.$e->getMessage());
         }
     }
 
@@ -166,8 +166,8 @@ class UserRepository implements UserInterface {
                     'zip'           => $request['zip'],
                 ]);
             });
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to update Teacher. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to update Teacher. '.$e->getMessage());
         }
     }
 
@@ -178,7 +178,7 @@ class UserRepository implements UserInterface {
             $section = Section::where('session_id', $session_id)
                                     ->first();
             if($schoolClass == null || $section == null){
-                throw new \Exception('There is no class and section');
+                throw new \InvalidArgumentException('There is no class and section');
             } else {
                 $class_id = $schoolClass->id;
                 $section_id = $section->id;
@@ -188,8 +188,8 @@ class UserRepository implements UserInterface {
         try {
             $promotionRepository = new PromotionRepository();
             return $promotionRepository->getAll($session_id, $class_id, $section_id);
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to get all Students. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to get all Students. '.$e->getMessage());
         }
     }
 
@@ -206,24 +206,24 @@ class UserRepository implements UserInterface {
     public function findStudent($id) {
         try {
             return User::with('parent_info', 'academic_info')->where('id', $id)->first();
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to get Student. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to get Student. '.$e->getMessage());
         }
     }
 
     public function findTeacher($id) {
         try {
             return User::where('id', $id)->where('role', 'teacher')->first();
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to get Teacher. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to get Teacher. '.$e->getMessage());
         }
     }
 
     public function getAllTeachers() {
         try {
             return User::where('role', 'teacher')->get();
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to get all Teachers. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to get all Teachers. '.$e->getMessage());
         }
     }
 
@@ -232,8 +232,8 @@ class UserRepository implements UserInterface {
             return User::where('id', auth()->user()->id)->update([
                 'password'  => Hash::make($new_password)
             ]);
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to change password. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to change password. '.$e->getMessage());
         }
     }
 }

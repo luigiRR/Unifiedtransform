@@ -7,7 +7,7 @@
         <div class="col-xs-11 col-sm-11 col-md-11 col-lg-10 col-xl-10 col-xxl-10">
             <div class="row pt-2">
                 <div class="col ps-4">
-                    <h1 class="display-6 mb-3"><i class="bi bi-diagram-3"></i> Classes</h1>
+                    <h1 class="display-6 mb-3"><em class="bi bi-diagram-3"></em> Classes</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
@@ -25,13 +25,13 @@
                                         <div class="card-header bg-transparent">
                                             <ul class="nav nav-tabs card-header-tabs">
                                                 <li class="nav-item">
-                                                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#class{{$school_class->id}}" role="tab" aria-current="true"><i class="bi bi-diagram-3"></i> {{$school_class->class_name}}</button>
+                                                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#class{{$school_class->id}}" role="tab" aria-current="true"><em class="bi bi-diagram-3"></em> {{$school_class->class_name}}</button>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#class{{$school_class->id}}-syllabus" role="tab" aria-current="false"><i class="bi bi-journal-text"></i> Syllabus</button>
+                                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#class{{$school_class->id}}-syllabus" role="tab" aria-current="false"><em class="bi bi-journal-text"></em> Syllabus</button>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#class{{$school_class->id}}-courses" role="tab" aria-current="false"><i class="bi bi-journal-medical"></i> Courses</button>
+                                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#class{{$school_class->id}}-courses" role="tab" aria-current="false"><em class="bi bi-journal-medical"></em> Courses</button>
                                                 </li>
                                             </ul>
                                         </div>
@@ -56,7 +56,7 @@
                                                                                 <p class="lead d-flex justify-content-between">
                                                                                     <span>Room No: {{$school_section->room_no}}</span>
                                                                                     @can('edit sections')
-                                                                                    <span><a href="{{route('section.edit', ['id' => $school_section->id])}}" role="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-pencil"></i> Edit</a></span>
+                                                                                    <span><a href="{{route('section.edit', ['id' => $school_section->id])}}" role="button" class="btn btn-sm btn-outline-primary"><em class="bi bi-pencil"></em> Edit</a></span>
                                                                                     @endcan
                                                                                 </p>
                                                                                 <div class="list-group">
@@ -77,7 +77,7 @@
                                                 </div>
                                                 <div class="tab-pane fade" id="class{{$school_class->id}}-syllabus" role="tabpanel">
                                                     @isset($school_class->syllabi)
-                                                    <table class="table table-borderless">
+                                                    <table class="table table-borderless" aria-describedby="SchoolSyllabus">
                                                         <thead>
                                                         <tr>
                                                             <th scope="col">Syllabus Name</th>
@@ -90,7 +90,7 @@
                                                             <td>{{$syllabus->syllabus_name}}</td>
                                                             <td>
                                                                 <div class="btn-group" role="group">
-                                                                    <a href="{{asset('storage/'.$syllabus->syllabus_file_path)}}" role="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i> Download</a>
+                                                                    <a href="{{asset('storage/'.$syllabus->syllabus_file_path)}}" role="button" class="btn btn-sm btn-outline-primary"><em class="bi bi-download"></em> Download</a>
                                                                 </div>
                                                             </td>
                                                             </tr>
@@ -101,7 +101,7 @@
                                                 </div>
                                                 <div class="tab-pane fade" id="class{{$school_class->id}}-courses" role="tabpanel">
                                                     @isset($school_class->courses)
-                                                        <table class="table">
+                                                        <table class="table" aria-describedby="Courses">
                                                             <thead>
                                                             <tr>
                                                                 <th scope="col">Course Name</th>
@@ -116,7 +116,7 @@
                                                                 <td>{{$course->course_type}}</td>
                                                                 <td>
                                                                     @can('edit courses')
-                                                                    <a href="{{route('course.edit', ['id' => $course->id])}}" class="btn btn-sm btn-outline-primary" role="button"><i class="bi bi-pencil"></i> Edit</a>
+                                                                    <a href="{{route('course.edit', ['id' => $course->id])}}" class="btn btn-sm btn-outline-primary" role="button"><em class="bi bi-pencil"></em> Edit</a>
                                                                     @endcan
                                                                 </td>
                                                             </tr>
@@ -132,7 +132,7 @@
                                                 <span>Total Sections: {{$total_sections}}</span>
                                             @endisset
                                             @can('edit classes')
-                                            <span><a href="{{route('class.edit', ['id' => $school_class->id])}}" class="btn btn-sm btn-outline-primary" role="button"><i class="bi bi-pencil"></i> Edit Class</a></span>
+                                            <span><a href="{{route('class.edit', ['id' => $school_class->id])}}" class="btn btn-sm btn-outline-primary" role="button"><em class="bi bi-pencil"></em> Edit Class</a></span>
                                             @endcan
                                         </div>
                                     </div>

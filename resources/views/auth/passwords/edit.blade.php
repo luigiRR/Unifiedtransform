@@ -7,7 +7,7 @@
         <div class="col-xs-11 col-sm-11 col-md-11 col-lg-10 col-xl-10 col-xxl-10">
             <div class="row pt-2">
                 <div class="col ps-4">
-                    <h1 class="display-6 mb-3"><i class="bi bi-journal-medical"></i> Change Password</h1>
+                    <h1 class="display-6 mb-3"><em class="bi bi-journal-medical"></em> Change Password</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
@@ -30,7 +30,7 @@
                                 <label for="new-password" class="form-label">Confirm new Password</label>
                                 <input class="form-control" id="new-password" name="new_password_confirmation" type="password" placeholder="Confirm new password">
                             </div>
-                            <button type="submit" class="btn btn-outline-primary"><i class="bi bi-check2"></i> Save</button>
+                            <button type="submit" class="btn btn-outline-primary"><em class="bi bi-check2"></em> Save</button>
                         </form>
                     </div>
                 </div>

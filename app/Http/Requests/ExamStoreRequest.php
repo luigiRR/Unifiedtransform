@@ -23,14 +23,19 @@ class ExamStoreRequest extends FormRequest
      */
     public function rules()
     {
+        $message = 'required|integer|gt:0';
         return [
             'exam_name'     => 'required|string',
             'start_date'    => 'required|date',
             'end_date'      => 'required|date',
-            'semester_id'   => 'required|integer|gt:0',
+            /*'semester_id'   => 'required|integer|gt:0',
             'class_id'      => 'required|integer|gt:0',
             'course_id'     => 'required|integer|gt:0',
-            'session_id'    => 'required|integer|gt:0',
+            'session_id'    => 'required|integer|gt:0',*/
+            'semester_id'   => ($message),
+            'class_id'      => ($message),
+            'course_id'     => ($message),
+            'session_id'    => ($message)
         ];
     }
 }

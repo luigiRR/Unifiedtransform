@@ -11,8 +11,8 @@ class AssignedTeacherRepository implements AssignedTeacherInterface {
     public function assign($request) {
         try {
             AssignedTeacher::create($request);
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to assign teacher. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to assign teacher. '.$e->getMessage());
         }
     }
 

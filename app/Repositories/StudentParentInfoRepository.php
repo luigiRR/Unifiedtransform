@@ -15,8 +15,8 @@ class StudentParentInfoRepository {
                 'mother_phone'  => $request['mother_phone'],
                 'parent_address'=> $request['parent_address'],
             ]);
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to create Student Parent information. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to create Student Parent information. '.$e->getMessage());
         }
     }
 
@@ -34,8 +34,8 @@ class StudentParentInfoRepository {
                 'mother_phone'  => $request['mother_phone'],
                 'parent_address'=> $request['parent_address'],
             ]);
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to update Student Parent information. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to update Student Parent information. '.$e->getMessage());
         }
     }
 }

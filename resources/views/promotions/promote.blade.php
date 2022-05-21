@@ -8,16 +8,16 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-person-lines-fill"></i> Promote Students
+                        <em class="bi bi-person-lines-fill"></em> Promote Students
                     </h1>
                     @include('session-messages')
                     <p class="text-danger">
-                        <small><i class="bi bi-exclamation-diamond-fill me-2"></i> Students must be promoted only once to a new Session. Ususally, Admin will create a New Session once Academic activity ends for the Current Session.</small>
+                        <small><em class="bi bi-exclamation-diamond-fill me-2"></em> Students must be promoted only once to a new Session. Ususally, Admin will create a New Session once Academic activity ends for the Current Session.</small>
                     </p>
                     <div class="mb-4 mt-4">
                         <form action="{{route('promotions.store')}}" method="POST">
                             @csrf
-                            <table class="table mt-4">
+                            <table class="table mt-4" aria-describedby="StudentsPrevious">
                                 <thead>
                                     <tr>
                                         <th scope="col">#ID Card Number</th>
@@ -59,7 +59,7 @@
                                     @endisset
                                 </tbody>
                             </table>
-                            <button type="submit" class="btn btn-outline-primary mb-3"><i class="bi bi-sort-numeric-up-alt"></i> Promote</button>
+                            <button type="submit" class="btn btn-outline-primary mb-3"><em class="bi bi-sort-numeric-up-alt"></em> Promote</button>
                         </form>
                     </div>
                 </div>

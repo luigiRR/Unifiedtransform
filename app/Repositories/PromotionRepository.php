@@ -15,8 +15,8 @@ class PromotionRepository {
                 'section_id'    => $request['section_id'],
                 'id_card_number'=> $request['id_card_number'],
             ]);
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to add Student. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to add Student. '.$e->getMessage());
         }
     }
 
@@ -25,8 +25,8 @@ class PromotionRepository {
             Promotion::where('student_id', $student_id)->update([
                 'id_card_number'=> $request['id_card_number'],
             ]);
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to update Student. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to update Student. '.$e->getMessage());
         }
     }
 
@@ -42,8 +42,8 @@ class PromotionRepository {
                         'id_card_number' => $row['id_card_number'],
                     ]);
                 }
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to promote students. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to promote students. '.$e->getMessage());
         }
     }
 

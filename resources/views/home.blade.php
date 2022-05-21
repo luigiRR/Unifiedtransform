@@ -7,14 +7,13 @@
         <div class="col-xs-11 col-sm-11 col-md-11 col-lg-10 col-xl-10 col-xxl-10">
             <div class="row pt-3">
                 <div class="col ps-4">
-                    <!-- <h1 class="display-6 mb-3"><i class="ms-auto bi bi-grid"></i> {{ __('Dashboard') }}</h1> -->
                     <div class="row dashboard">
                         <div class="col">
                             <div class="card rounded-pill">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-start">
                                         <div class="ms-2 me-auto">
-                                            <div class="fw-bold"><i class="bi bi-person-lines-fill me-3"></i> Total Students</div>
+                                            <div class="fw-bold"><em class="bi bi-person-lines-fill me-3"></em> Total Students</div>
                                         </div>
                                         <span class="badge bg-dark rounded-pill">{{$studentCount}}</span>
                                     </div>
@@ -26,7 +25,7 @@
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-start">
                                         <div class="ms-2 me-auto">
-                                            <div class="fw-bold"><i class="bi bi-person-lines-fill me-3"></i> Total Teachers</div>
+                                            <div class="fw-bold"><em class="bi bi-person-lines-fill me-3"></em> Total Teachers</div>
                                         </div>
                                         <span class="badge bg-dark rounded-pill">{{$teacherCount}}</span>
                                     </div>
@@ -38,7 +37,7 @@
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-start">
                                         <div class="ms-2 me-auto">
-                                            <div class="fw-bold"><i class="bi bi-diagram-3 me-3"></i> Total Classes</div>
+                                            <div class="fw-bold"><em class="bi bi-diagram-3 me-3"></em> Total Classes</div>
                                         </div>
                                         <span class="badge bg-dark rounded-pill">{{ $classCount }}</span>
                                     </div>
@@ -82,20 +81,20 @@
                         <div class="col">
                             <div class="p-3 text-white bg-dark rounded-3">
                                 <h3>Welcome to Unifiedtransform!</h3>
-                                <p><i class="bi bi-emoji-heart-eyes"></i> Thanks for your love and support.</p>
+                                <p><em class="bi bi-emoji-heart-eyes"></em> Thanks for your love and support.</p>
                             </div>
                         </div>
                         <div class="col">
                             <div class="p-3 bg-white border rounded-3" style="height: 100%;">
                                 <h3>Manage school better</h3>
-                                <p class="text-end">with <i class="bi bi-lightning"></i> <a href="https://github.com/changeweb/Unifiedtransform" target="_blank" style="text-decoration: none;">Unifiedtransform</a> <i class="bi bi-lightning"></i>.</p>
+                                <p class="text-end">with <em class="bi bi-lightning"></em> <a href="https://github.com/changeweb/Unifiedtransform" target="_blank" style="text-decoration: none;">Unifiedtransform</a> <em class="bi bi-lightning"></em>.</p>
                             </div>
                         </div>
                     </div>
                     <div class="row mt-4">
                         <div class="col-lg-6">
                             <div class="card mb-3">
-                                <div class="card-header bg-transparent"><i class="bi bi-calendar-event me-2"></i> Events</div>
+                                <div class="card-header bg-transparent"><em class="bi bi-calendar-event me-2"></em> Events</div>
                                 <div class="card-body text-dark">
                                     @include('components.events.event-calendar', ['editable' => 'false', 'selectable' => 'false'])
                                     {{-- <div class="overflow-auto" style="height: 250px;">
@@ -115,7 +114,7 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="card mb-3">
-                                <div class="card-header bg-transparent d-flex justify-content-between"><span><i class="bi bi-megaphone me-2"></i> Notices</span> {{ $notices->links() }}</div>
+                                <div class="card-header bg-transparent d-flex justify-content-between"><span><em class="bi bi-megaphone me-2"></em> Notices</span> {{ $notices->links() }}</div>
                                 <div class="card-body p-0 text-dark">
                                     <div>
                                         @isset($notices)

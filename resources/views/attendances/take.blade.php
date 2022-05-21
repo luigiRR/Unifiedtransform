@@ -8,12 +8,12 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-calendar2-week"></i> Take Attendance
+                        <em class="bi bi-calendar2-week"></em> Take Attendance
                     </h1>
 
                     @include('session-messages')
 
-                    <h3><i class="bi bi-compass"></i>
+                    <h3><em class="bi bi-compass"></em>
                         Class #{{request()->query('class_name')}}, 
                         @if ($academic_setting->attendance_type == 'course')
                             Course: {{request()->query('course_name')}}
@@ -35,7 +35,7 @@
                                     <input type="hidden" name="course_id" value="0">
                                     <input type="hidden" name="section_id" value="{{request()->query('section_id')}}">
                                 @endif
-                                <table class="table">
+                                <table class="table" aria-describedby="StudentList">
                                     <thead>
                                         <tr>
                                             <th scope="col"># ID Card Number</th>

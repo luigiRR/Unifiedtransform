@@ -18,7 +18,6 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-    <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -33,7 +32,7 @@
         <nav class="navbar sticky-top navbar-expand-md navbar-light bg-white border-btm-e6">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <i class="bi bi-house"></i> {{ config('app.name', 'Laravel') }}
+                    <em class="bi bi-house"></em> {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -52,11 +51,11 @@
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             @if (session()->has('browse_session_name') && session('browse_session_name') !== $current_school_session_name)
-                                <a class="nav-link text-danger disabled" href="#" tabindex="-1" aria-disabled="true"><i class="bi bi-exclamation-diamond-fill me-2"></i> Browsing as Academic Session {{session('browse_session_name')}}</a>
+                                <a class="nav-link text-danger disabled" href="#" tabindex="-1" aria-disabled="true"><em class="bi bi-exclamation-diamond-fill me-2"></em> Browsing as Academic Session {{session('browse_session_name')}}</a>
                             @elseif(\App\Models\SchoolSession::latest()->count() > 0)
                                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Current Academic Session {{$current_school_session_name}}</a>
                             @else
-                                <a class="nav-link text-danger disabled" href="#" tabindex="-1" aria-disabled="true"><i class="bi bi-exclamation-diamond-fill me-2"></i> Create an Academic Session.</a>
+                                <a class="nav-link text-danger disabled" href="#" tabindex="-1" aria-disabled="true"><em class="bi bi-exclamation-diamond-fill me-2"></em> Create an Academic Session.</a>
                             @endif
                         </li>
                     </ul>
@@ -79,12 +78,12 @@
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{route('password.edit')}}">
-                                        <i class="bi bi-key me-2"></i> Change Password
+                                        <em class="bi bi-key me-2"></em> Change Password
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        <i class="bi bi-door-open me-2"></i> {{ __('Logout') }}
+                                        <em class="bi bi-door-open me-2"></em> {{ __('Logout') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

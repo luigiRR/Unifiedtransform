@@ -10,8 +10,8 @@ class SchoolClassRepository implements SchoolClassInterface {
     public function create($request) {
         try {
             SchoolClass::create($request);
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to create School Class. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to create School Class. '.$e->getMessage());
         }
     }
 
@@ -36,12 +36,10 @@ class SchoolClassRepository implements SchoolClassInterface {
 
         $school_sections = $sectionRepository->getAllBySession($session_id);
 
-        $data = [
+        return([
             'school_classes' => $school_classes,
             'school_sections'=> $school_sections,
-        ];
-
-        return $data;
+        ]);
     }
 
     public function findById($class_id) {
@@ -53,8 +51,8 @@ class SchoolClassRepository implements SchoolClassInterface {
             SchoolClass::find($request->class_id)->update([
                 'class_name'  => $request->class_name,
             ]);
-        } catch (\Exception $e) {
-            throw new \Exception('Failed to update School Class. '.$e->getMessage());
+        } catch (\InvalidArgumentException $e) {
+            throw new \InvalidArgumentException('Failed to update School Class. '.$e->getMessage());
         }
     }
 }
